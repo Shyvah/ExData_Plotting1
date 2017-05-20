@@ -13,3 +13,7 @@ plot(finalData$SetTime, finalData$Sub_metering_1, type="l", col=columnlines[1], 
 lines(finalData$SetTime, finalData$Sub_metering_2, col=columnlines[2])
 lines(finalData$SetTime, finalData$Sub_metering_3, col=columnlines[3])
 legend("topright", legend=labels, col=columnlines, lty="solid")
+
+## Save file
+dev.copy(png,"plot3.png", width=480, height=480)
+dev.off()
